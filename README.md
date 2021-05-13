@@ -28,11 +28,13 @@ In this project load is sharing among the transformers according to the load con
 ### Working:
 In this project we use three Transformers.
 The ratings of the transformers are
+
   Transformer 1: 12V,1A
         
   Transformer 2: 12V,750MA
         
   Transformer 3:12V,2A
+  
 Transformer 1 is used as the main transformer for providing supply to all the equipment. Transformer 2 is used for supplying low load and Transformer 3 is used for supplying high loads.
             Here we are using 230V AC as input. For converting 230V AC to 12V DC we are using bridge rectifiers. The output of a bridge rectifier is connected to voltage regulator for providing 5V DC supply to arduino microcontroller. We use a LCD display(16*2). It has 5 positive pins and 5 negative pins. But the microcontroller uses only one positive and one negative, so one bypass circuit is used for bypassing other positives and negatives.
             
@@ -40,3 +42,19 @@ Transformer 1 is used as the main transformer for providing supply to all the eq
               
 In relay we use diode for unidirectional flow because when the heavy load occurs the load should be supplied by Transformer 3 only.
 The flow of supply to the load through Transformer 2 should be restricted. The LCD display shows the condition of load i.e., whether the load is balanced or unbalanced and the current at every instant is displayed LCD.
+### SIMULATION RESULTS
+![output when load is balanced](https://imgur.com/DSXG32G.png) ![output when load is unbalanced](https://imgur.com/ZgHRwwk.png)
+### CONCLUSION
+This Project work provides an efficient way for load sharing and control at real time. The efficient sharing of transformers can be done by using Arduino microcontroller, current sensor and relay. The Arduino microcontroller is programmed such that whenever the high load occurs then the current sensor senses that load and trips the relay and switches the overload to the other transformer.
+
+   This Project is the small model of this type of application which is widely used in industrial applications. To avoid damage to the equipment which are used in industries, and to obtain reliability this type of models are preferred. By using this type of models in various industries efficiency of the system increases. Even though its intimal investment is costly by extending this project to various applications we can have more benefits.
+   ### REFERENCES
+   
+•	https://www.arduino.cc/en/Guide/Introduction
+
+•	https://www.arduino.cc/en/Reference/HomePage
+
+•	https://en.wikipedia.org/
+
+•	Electrical Machines by D P Kotari
+
